@@ -1,0 +1,11 @@
+.section-header-button {
+	 width: 100% !important; 
+	 text-align: left;
+}
+
+.detailPhoto {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 48px;
+  margin: 16px;
+}

@@ -1,0 +1,69 @@
+
+<md-card>
+  <div>  
+    <div>
+      <a ui-sref="contact({contactId:contact.contactId})">
+        <img 
+          ng-src="{{contact.picture || 'img/logo.png'}}" 
+          class="detailPhoto" 
+          alt="{{contact.accountName}}"
+          style=" border-radius:30px; width: 60px; height:60px; margin-left: 5px; margin-top:10px; float:left" />
+      </a>
+    </div>
+    <div 
+      class="md-list-item-text" 
+      style=" float:right; display: table; width:110px; 
+      height:50px;">
+      <div style="float:right; display: table; width:115px; height:50px;display:inline-flex;">
+        <md-switch 
+          class="md-primary" 
+          ng-model="contact.switch"
+          aria-label="Switch" 
+          style="width:30px height:30px;float:left;"></md-switch>
+    
+        <span style="font-size:16px;margin: auto 5px;">{{contact.days}}d</span>
+        <md-button class="md-icon-button" aria-label="More" 
+          style="margin-right:5px;margin-left:10px">    
+          <span 
+            class="glyphicon glyphicon glyphicon-option-vertical icon-large" 
+            style="font-size:16px">
+          </span>
+        </md-button>
+      </div>
+      <div style="clear:left;width:115px; margin-right:10px;margin-top:10px" align="right">
+        <span style="font-size:12px">{{contact.assignedUser}}</span> 
+        <div class="md-primary-bg" 
+        style="display: inline-block;border-radius:10px;width:20px;height:20px;background:red;">&nbsp;</div>
+      </div>  
+    </div>
+    <a ui-sref="contact({contactId:contact.contactId})">
+    <div 
+      class="md-list-item-text" 
+      style="margin-bottom:10px; width:auto;margin-left:70px;margin-right: 110px;">
+      <h5>{{contact.contactName}} - {{contact.opportunityName}}</h5>
+      <h5>{{contact.value | currency:'EUR ':0}} - {{contact.opportunityStage}}</h5>
+      <h5>
+        <span class="glyphicon glyphicon-envelope icon-large" style="font-size:18px"></span> 
+        <span style="color:grey">{{contact.subjectLine}}</span>
+      </h5>
+    </div>
+    </a>
+  </div>
+  <div style="margin-left:70px;margin-bottom:10px;">
+    <md-button 
+      class="md-raised md-primary btn-sm"    
+      style="margin-botton:10px" >
+        Feed
+    </md-button>
+    <md-button 
+      class="md-raised md-primary btn-sm"    
+      style="margin-botton:10px; margin-left:10px" >
+        Schedule
+    </md-button>
+    <md-button 
+      class="md-raised md-primary btn-sm"    
+      style="margin-botton:10px; margin-left:10px" >
+        Assign
+    </md-button>
+  </div>
+</md-card

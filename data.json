@@ -1,0 +1,80 @@
+[
+  {
+    "contactId": 7,
+    "contactName": "Unknown",
+    "opportunityName": "Nothing",
+    "value": 10000,
+    "opportunityStage": "None",
+    "subjectLine": "Empty",
+    "assignedUser": "Qwerty",
+    "status": "action_needed",
+    "switch": false,
+    "days": 2,
+    "picture": "img/user2.png"
+  },
+  {
+    "contactId": 6,
+    "contactName": "Maikon F",
+    "opportunityName": "Internship",
+    "value": 1200,
+    "opportunityStage": "Testing",
+    "subjectLine": "Angular.JS Test",
+    "assignedUser": "John",
+    "status": "action_needed",
+    "switch": true,
+    "days": 1,
+    "picture": "img/user1.png"
+  },
+  {
+    "contactId": 5,
+    "contactName": "John Doe",
+    "opportunityName": "New Partnership",
+    "value": 200,
+    "opportunityStage": "New",
+    "subjectLine": "Super offer",
+    "assignedUser": "No one",
+    "status": "awaiting_reply",
+    "switch": false,
+    "days": 5,
+    "picture": "img/user3.png"
+  },
+  {
+    "contactId": 1,
+    "contactName": "Obama",
+    "opportunityName": "Sponsorship",
+    "value": 999999,
+    "opportunityStage": "Declined",
+    "subjectLine": "Meeting",
+    "assignedUser": "Admin",
+    "status": "awaiting_reply",
+    "switch": true,
+    "days": 30,
+    "picture": "img/obama.png"
+  },
+  {
+    "contactId": 2,
+    "contactName": "Hiro",
+    "opportunityName": "Japan Branch",
+    "value": 10700,
+    "opportunityStage": "New",
+    "subjectLine": "Rent expired",
+    "assignedUser": "Jack",
+    "status": "followup_schedule",
+    "switch": true,
+    "days": 20,
+    "picture": "img/user4.png"
+  },
+  {
+    "contactId": 3,
+    "contactName": "Martin",
+    "opportunityName": "Operation Mars",
+    "value": 1,
+    "opportunityStage": "Declined",
+    "subjectLine": "Mission Mars",
+    "assignedUser": "Martian",
+    "status": "followup_schedule",
+    "switch": false,
+    "days": 90,
+    "picture": "img/martian.png"
+  }
+]

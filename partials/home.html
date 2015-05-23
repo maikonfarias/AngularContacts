@@ -1,0 +1,57 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <span class="md-flex">Contacts</span>
+  </div>
+</md-toolbar>
+<div ng-controller="HomeController">
+  <md-content>
+    <md-button 
+      class="md-raised" 
+      data-toggle="collapse" 
+      data-target="#sectionarea1" 
+      ng-click="toggleArea1('#sectionarea1')"
+      style="width: 100%; text-align: left; height:40px;font-weight:bold;margin-top:10px" >
+        New
+        <i class="pull-right glyphicon" style="margin-right:10px"
+          ng-class="{'glyphicon-chevron-down': isArea1Open, 'glyphicon-chevron-right': !isArea1Open}">
+        </i>
+    </md-button>
+    <div id="sectionarea1" class="collapse in">
+      <div ng-repeat="contact in data | filter: { status: 'action_needed' }">
+       <contact-list-item></contact-list-item>
+      </div>
+    </div>
+    <md-button 
+      class="md-raised" 
+      data-toggle="collapse" 
+      data-target="#sectionarea2"
+      ng-click="toggleArea2('#sectionarea2')"
+      style="width: 100%; text-align: left; height:40px;font-weight:bold;margin-top:10px">
+        Pending
+        <i class="pull-right glyphicon" style="margin-right:10px"
+          ng-class="{'glyphicon-chevron-down': isArea2Open, 'glyphicon-chevron-right': !isArea2Open}">
+        </i>
+    </md-button>
+    <div id="sectionarea2" class="collapse in">
+      <div ng-repeat="contact in data | filter: { status: 'awaiting_reply' }">    
+       <contact-list-item></contact-list-item>
+      </div>
+    </div>
+    <md-button 
+      class="md-raised" 
+      data-toggle="collapse" 
+      data-target="#sectionarea3" 
+      ng-click="toggleArea3('#sectionarea3')"
+      style="width: 100%; text-align: left; height:40px;font-weight:bold;margin-top:10px">
+        Ignored
+        <i class="pull-right glyphicon" style="margin-right:10px"
+          ng-class="{'glyphicon-chevron-down': isArea3Open, 'glyphicon-chevron-right': !isArea3Open}">
+        </i>
+    </md-button>
+    <div id="sectionarea3" class="collapse in">
+      <div ng-repeat="contact in data | filter: { status: 'followup_schedule' }">     
+       <contact-list-item></contact-list-item>
+      </div>
+    </div>
+  </md-content>
+</div>

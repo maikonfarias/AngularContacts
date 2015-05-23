@@ -1,0 +1,100 @@
+<div ng-controller="ContactController" ng-hide="!data">
+  <md-toolbar>
+    <div class="md-toolbar-tools" >
+      <div>
+        <a ui-sref="home">
+          <md-button class="md-icon-button" aria-label="Back" 
+            style="margin-right:5px;margin-left:10px">    
+            <span 
+              class="glyphicon glyphicon-remove icon-large" 
+              style="font-size:16px">
+            </span>
+          </md-button>
+        </a>
+      </div>
+      <div style="float:left">
+        <span class="md-flex">{{data.contactName}}</span>
+      </div>
+      <div style="float:right;">
+        <md-button class="md-icon-button" aria-label="More" 
+          style="margin-right:5px;margin-left:10px">    
+          <span 
+            class="glyphicon glyphicon-pencil icon-large" 
+            style="float:right;font-size:16px">
+          </span>
+        </md-button>
+      </div>
+    </div>
+  </md-toolbar>
+  <div>
+    <div style="margin-left:10px">
+      <img 
+        ng-src="{{data.picture || 'img/logo.png'}}" 
+        class="detailPhoto" 
+        alt="{{data.accountName}}"
+        style=" border-radius:30px; width: 60px; height:60px; margin-left: 5px; margin-top:0px; float:left" />
+    </div>
+    <div 
+      class="md-list-item-text" 
+      style="margin-bottom:10px; width:auto;margin-top:20px;margin-left:90px;margin-right: 20px">
+      <h4>{{data.contactName}}</h4>
+      <h5>{{data.work}}, {{data.company}}</h5>
+    </div>
+    <hr />
+    <div style="margin-left:20px">
+      <a href="{{data.linkedinLink}}" >
+        <img ng-src="img/linkedin-icon.png" ng-show="data.linkedinLink" width="40"></img>
+      </a>
+      <a href="{{data.facebookLink}}">
+        <img ng-src="img/facebook-icon.png" ng-show="data.facebookLink" width="40"></img>
+      </a>
+    </div> 
+    <hr />
+    <div  style="margin-right:20px;margin-left:20px">
+      <h4><b>CONTACT DETAILS</b></h1>
+      <hr />
+      <div>
+        <div layout="row">
+          <span 
+            class="glyphicon glyphicon-envelope icon-large md-primary" 
+            style="font-size:22px;color:#29b6f6; margin-right:20px;margin-top:10px"></span>
+          <div >
+            <div>{{data.email}}</div>
+            <div style="clear:both;margin-top:5px;color:gray">email</div>
+          </div>
+        </div>
+        <hr />
+        <div layout="row">
+          <span 
+            class="glyphicon glyphicon-earphone icon-large md-primary" 
+            style="font-size:22px;color:#29b6f6; margin-right:20px;margin-top:10px"></span>
+          <div >
+            <div>{{data.phone}}</div>
+            <div style="clear:both;margin-top:5px;color:gray">mobile</div>
+          </div>
+        </div>
+        <hr />
+        <div layout="row">
+          <span 
+            class="glyphicon glyphicon-map-marker icon-large md-primary" 
+            style="font-size:22px;color:#29b6f6; margin-right:20px;margin-top:10px"></span>
+          <div >
+            <div>{{data.address}}</div>
+            <div style="clear:both;margin-top:5px;color:gray">work</div>
+          </div>
+        </div>
+      </div>
+      <h4 style="margin-top:30px;"><b>POSITIONS</b></h1>
+      <hr />
+      <div layout="row">
+        <span 
+          class="glyphicon glyphicon-briefcase icon-large md-primary" 
+          style="font-size:22px;color:#29b6f6; margin-right:20px;margin-top:10px"></span>
+        <div >
+          <div>{{data.company}}</div>
+          <div style="clear:both;margin-top:5px;color:gray">{{data.work}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
